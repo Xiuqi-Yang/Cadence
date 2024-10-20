@@ -51,6 +51,9 @@ AC Amplitude，指的是信号的幅度，这个可以看瞬态看出，值太�
 ```
 https://bbs.eetop.cn/thread-411105-1-1.html
 
+
+1600
+64db左右
 ### 测量增益带宽积(GB)
 然后利用AC扫描频率，利用计算器功能可以测出增益带宽积GB
 或者还有一种方法如下，选择Results->Direct Plot->db20
@@ -61,4 +64,15 @@ https://bbs.eetop.cn/thread-411105-1-1.html
 跳出的窗口要点两下，第一下点输出，第二下点正输入（有交流分量那个）
 ![4](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/4.png?raw=true)
 
+88.48°
+或者直接看0db放大处的相位
+
 ### 测量CMRR共模抑制比
+![5](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/5.png?raw=true)
+https://www.bilibili.com/video/BV14K41157gD/?vd_source=1665cada9c9517dbf4ed9e94d70b25f0
+可以注意看一这个，cmrr这边用的是ac仿真而不是tran，不知道那个是对的
+
+
+结果就是av的db+cmrr低频db
+52.08db
+
