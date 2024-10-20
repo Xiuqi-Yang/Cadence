@@ -80,3 +80,10 @@ https://www.bilibili.com/video/BV14K41157gD/?vd_source=1665cada9c9517dbf4ed9e94d
 ![ICMR](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/icmr%20method.png?raw=true)
 ![ICMR](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/ICMR.png?raw=true)
 公模输入范围就是一样的部分
+
+
+### SR
+![SR](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/SR.png?raw=true)
+
+![SR_U](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/SR%20U.png?raw=true)
+![SR_F](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/SR%20D.png?raw=true)
