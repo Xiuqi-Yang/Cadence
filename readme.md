@@ -71,8 +71,12 @@ https://bbs.eetop.cn/thread-411105-1-1.html
 ![5](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/5.png?raw=true)
 https://www.bilibili.com/video/BV14K41157gD/?vd_source=1665cada9c9517dbf4ed9e94d70b25f0
 可以注意看一这个，cmrr这边用的是ac仿真而不是tran，不知道那个是对的
-
-
+![cmrr](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/cmrr.png?raw=true)
+![CMRR2](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/cmrr1.png?raw=true)
 结果就是av的db+cmrr低频db
 52.08db
 
+### icmr
+![ICMR](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/icmr%20method.png?raw=true)
+![ICMR](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/ICMR.png?raw=true)
+公模输入范围就是一样的部分
