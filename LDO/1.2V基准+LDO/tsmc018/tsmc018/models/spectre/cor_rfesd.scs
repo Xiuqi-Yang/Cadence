@@ -1,0 +1,16 @@
+library rfesd_cor 
+
+section ff_rfesd 
+include "cr018gpii_v1d0.scs" section = ff_rfesd 
+endsection ff_rfesd 
+
+section ss_rfesd 
+include "cr018gpii_v1d0.scs" section = ss_rfesd 
+endsection ss_rfesd 
+
+section tt_rfesd 
+include "cr018gpii_v1d0.scs" section = tt_rfesd 
+endsection tt_rfesd 
+
+
+endlibrary rfesd_cor 

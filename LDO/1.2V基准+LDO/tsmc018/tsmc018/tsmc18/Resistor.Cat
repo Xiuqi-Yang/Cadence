@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/Resistor_2T.Cat type="category"
+tsmc18/Resistor_3T.Cat type="category"
+tsmc18/Resistor_RF.Cat type="category"
+tsmc18/Metal_Res.Cat  type="category"

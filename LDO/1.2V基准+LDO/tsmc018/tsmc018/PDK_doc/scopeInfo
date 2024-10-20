@@ -1,0 +1,205 @@
+1. Foundry Data
+1.1 Spice models
+
+       PROCESS : TSMC 0.18 UM CMOS MIXED SIGNAL RF GENERAL PURPOSE II 1P6M+AL SALICIDE 1.8/3.3V SPICE MODEL 018RG 
+       DOC. NO.: T-018-CM-SP-018
+       VERSION : 1.0
+       DATE    : 12/18/2009
+
+1.2 Design rule & DRC
+
+       PROCESS : TSMC 0.18UM CMOS LOGIC/MS/RF AND 0.16UM CMOS LOGIC/MS 1P5M PROCESS DESIGN RULE (CL018G/LV/LP, CM018, CR018, CL016G, CM016)
+       DOC. NO.: T-018-LO-DR-001
+       VERSION : 2.8
+       DATE    : 07/16/2009
+       
+       PROCESS : TSMC 0.18 UM CMOS LOGIC/MS/RF AND 0.16 UM CMOS LOGIC/MS 1P6M DRC (ASSURA) COMMAND FILE (CL018G/LV/LP, CM018, CR018 CL016G, CM016) 
+       DOC. NO.: T-018-LO-DR-001-U1
+       VERSION : 2.8a
+       DATE    : 09/09/2009
+
+       PROCESS : TSMC 0.18UM CMOS LOGIC/MS/RF AND 0.16UM CMOS LOGIC/MS DRC (CALIBRE) COMMAND FILE (CL018G/LV/LP, CM018, CR018 CL016G, CM016) 
+       DOC. NO.: T-018-LO-DR-001-C1
+       VERSION : 2.8a
+       DATE    : 06/25/2009 
+
+1.3 Device Formation document & LVS
+
+       PROCESS : TSMC 0.18um Mixed-Signal RF SALICIDE 1P6M+, 1.8V/3.3V LVS (ASSURA) COMMAND FILE 
+       DOC. NO.: T-018-CM-SP-018-U1
+       VERSION : 1.0b
+       DATE    : 12/16/2009
+
+       PROCESS : TSMC 0.18um Mixed-Signal RF SALICIDE 1P6M+, 1.8V/3.3V LVS (CALIBRE) COMMAND FILE 
+       DOC. NO.: T-018-CM-SP-018-C1
+       VERSION : 1.0c
+       DATE    : 12/02/2009
+
+1.4 RC technology files
+
+       PROCESS : TSMC 0.18 UM MIXED MODE 1P6M SALICIDE 1.8V/3.3V RC (ASSURA) TECH FILE  
+       DOC. NO.: T-018-MM-SP-001-V1
+       VERSION : 1.5a
+       DATE    : 08/19/2008
+       
+       PROCESS : TSMC 0.18um Mixed-Signal RF SALICIDE 1P6M+, 1.8V/3.3V RC (xCALIBRE) TECH. FILES. 
+       DOC. NO.: T-018-MM-SP-001-X1 
+       VERSION : 1.5c
+       DATE    : 12/05/2008 
+       
+1.5 Layer definitation document & Virtuoso techfile
+
+       PROCESS : TSMC layout editor technology file for TSMC 0.18UM CMOS LOGIC/MS/RF AND 0.16UM CMOS LOGIC/MS 1P5M PROCESS
+       DOC. NO.: T-018-LO-LE-004
+       VERSION : 2.8b_pre110309
+       DATE    : 11/03/2009
+
+2. Known problems
+
+  2.1 Due to TSMC CR018 model has already included all the internal routing parasitic for RF devices, RC extraction tools should not extract any parasitic parameters from RF device anymore.
+
+  2.2 When running spectre simulation, users may get a warning message of "'w' is not a valid parameter for an instance of 'xjvar_w40', ignored" or "'nr' is not a valid parameter for an instance of 'xjvar_nr36', ignored". This is due to we netlist the extra parameter 'w' for 'xjvar_w40' and 'nr' for 'xjvar_nr36'. Since the 'w' parameter in xjvar_w40 and nr parameter in xjvar_nr36 is useless, they will not affect the simulation result.
+
+  2.3 Since there is a limitation in deciding the 'width' and 'length' of a base-band MIM capacitor, mimcap, for TSMC's LVS command file, users may need to specially take care on this device when users use this device in designs for simulation.
+
+  2.4 After finishing the spectre simulation, some devices and parameters, such as resistors in serial and parallel connections and mutual inductance of symmetric inductors, can not be correctly back-annotated into schematic capture because the resistor model does not support segmentation.
+
+  2.5 The ADS model is not provided in this PDK.
+
+  2.6 The NRS/NRD of MOS devices have a little differece between the symbol (by PDK) and RC extraction. The reason is PDK calculats the NRS/NRD from Gate to central of CO location/width, while the RC deck calculated them from Gate to OD edge/width (due to tool limitation). The NRS/NRD from symbol (PDK) are more accuracy.
+
+  2.7 The resistors with RPO follow the minimum extension to OD or poly resistors. In some cases the width is too small that the area of RPO area is lower than minimum area. Please enlarge RPO area depend on your design
+
+  2.8 The default spacing between each rnwod resistor segment is set to 2.87 um. The spacing should be changed for circuit optimization.
+
+  2.9 If poly route direction is set to "Top" "Bottom" "Both", and the finger number should be more than 2.
+
+  2.10 MOS with DNW must be placed in NWELL.
+
+  2.11 To execute corner analysis smoothly, all the content of mismatch blocks should be commented out excluding mc sections.
+
+  2.12 The varactors, nmoscap and pmoscap, are just for rederecne only. The values of capacitance shown ing the simulation are not exactly correct.
+
+  2.13 Design variables are not supported for all RF devices.
+  
+  2.14 For some critical device dimensions, the LVS result may shown a little property inaccuracy due to Assura tool significant number issue.
+       Users may ingnore them by themselves.
+       
+  2.15 In some special length and width ranges of resistors, their resistance values shown in CDF menu have
+       differences compared with simulation results. These resistance values are for reference only, and 
+       users should run simulations to get correct results.
+       
+  2.16 In some special radius and width ranges of inductors, their inductance values shown in CDF menu have
+       differences compared with simulation results. These inductance values are for reference only, and 
+       users should run simulations to get correct results.
+       
+  2.17 The back-annotation function of npn_mis, vpnp_mis, spiral_std_mu_x_20k, spiral_sym_mu_x_20k, spiral_sym_ct_mu_x_20k, spiral_std_mu_x_40k, spiral_sym_mu_x_40k, spiral_sym_ct_mu_x_40k, sbd_rf and sbd_rf_nw can not work due to model format issue.         
+ 
+  2.18 The truth table of moscap_rf and mimcap_rf33 in design rule menu, T-018-LO-DR-001 v2.8, is incorrect. There should be no DNW in moscap_rf and mimcap_rf33 layout views.
+       Please refer to /PDK_Doc/TSMC_DOC_WM/PDK/T-018-LO-DR-001_nmoscap_clarification_GP_GPII.pdf.
+  
+  2.19 There is DRC violations, RPO.A.1, in lcesd_rf. Please refer to /PDK_Doc/TSMC_DOC_WM/PDK/DRC_Violation_SOTE_for_lcesd_cell.pdf and waive it.
+  
+  2.20 There are DRC violations, UTM20K.E.3 and UTM40K.E.3, in spiral_std_mu_x_20k, spiral_sym_mu_x_20k, spiral_sym_ct_mu_x_20k, spiral_std_mu_x_40k, spiral_sym_mu_x_40k and spiral_sym_ct_mu_x_40k. 
+       Please refer to /PDK_Doc/TSMC_DOC_WM/PDK/CR018_GPII_INDUCTOR_Sote.pdf and waive them.  
+       
+  2.21 1.0f RF mimcap is not supported in this model.
+  
+3. Special Note
+
+  3.1 Users can use device with mismatch and statistical model for Monte Carlo application. Another, the layout of mismatch device is just for reference only.
+      DEVICS WITH MISMATCH MODELS('*_mis') PROVIDE IN THIS PDK ARE FOR FRONT-END SIMULATION ONLY, PLEASE DO NOT USE THEM IN YOUR BACK-END FLOW(DRC/LVS/RCX).
+      TSMC can provide an utility to help users switch instances between basic and mismatch devices.
+
+  3.2 Deep N-well solution :
+      This PDK provides two diodes for deep nwell-- pwdnw and dnwpsub. Those two diodes have no layout views because those two diodes are parasitic diodes for deep nwell. Designers
+      can use those two diodes in schematic entry and simulation. If users want to verify for layout, users can remove comment mark in LVS command files. Then those two diodes can be extracted
+      for LVS or RC netlist.
+
+  3.3 Stretch handles :
+      This PDK provides stretch handles for all MOSFETs. PDK users can active the stretch handles option by options->display->stretch handles. The following values can be changed by stretch handles
+
+        a. width : upper center of gate b. length : right center of gate
+        d. source/drain metal size : upper/lower/right center of metal
+        c. source/drain metal vertical position : mark both upper/lower handles, then moving at x direction.
+        d. multi-fingers spacing : at center of second finger gate
+        e. multi-fingers source/drain/gate connection spacing and size : upper center handles are for size and center handles are for x position.
+        f. source/drain contact spacing : center of metal, right direction is to increase contact spacing, left is to decrease contact spacing.
+        To avoid off-grid issue at stretch length and finger spacing, please set the grid to 0.01 instead of default 0.005. Stretch handles also affect parasitic of
+        MOSs. Some stretch handles will be turn off when user turns on S/D switch option.
+
+  3.4 If the GUI mode LVS is executed, please select "bind.rul" for your bind rule.
+      If the GDS mode LVS is executed, please select "bind_cdl.rul" for your bind rule.
+
+  3.5 The biopolars, pnp/npn/vpnp, dont have the layout view. It will be automatically generated during
+      the schematic driven layout procedures.
+
+  3.6 For all the CDF parameters, invalid entries such as random characters (*&^%) are not allowed to be used in CDF entry fields.
+
+  3.7 Diodesd3v, dio_pwdnw, and dio_dnwpsub only provide front-end schematic capture and have no Pcell layouts support.
+  
+  3.8 Please refer to /PDK_Doc/TSMC_DOC_WM/PDK/C018_SBD_SOTE.pdf mentioned about 0.18um Schottky barrier diode (SBD) from TSMC RD team as follows:
+      Minimum scalable dimension step is required to be 0.01um to fulfill 0.18um Schottky barrier diode (SBD) device and model scope (Min. W=2um, Min. L=4 um).
+  
+  3.9 All the cells included in this PDK are built based on current design rule documents and spice model cards.
+      Some of rules, parameters and decks may be changed after this release, please contact TSMC for the most up-to-date
+      information.
+      
+  3.10 TSMC 0.18um GP models, T-018-MM-SP-001 and T-018-MM-SP-002, are not compaible with TSMC GPII models, T-018-CM-SP-018 and T-018-CM-SP-007, so that TSMC 0.18um PDKs of GP models are not compaible 
+       with TSMC GPII PDKs of GPII models. In other words, IP designed by TSMC 0.18um GP and GPII model can not exist simultaneously, and there is no migration tool from GP to GPII design.             
+       Please refer to /PDK_Doc/TSMC_DOC_WM/PDK/Model_clarification_T-018-MM-SP-001_T-018-CM-SP-018.pdf.
+      
+  3.11 The capacitance value shown in crtmom, cfmom, cfmom_rf and cfmom_mx CDF menu is Cab+Cap with assumption of "b" and "p" nodes tied to ground, not only Cab.      
+
+  3.12 All the cells included in this PDK are built based on current design rule documents and spice model cards. Some of rules or parameters may be changed after this release, please contact TSMC for the most up-to-date information.
+	   
+  3.13 Please do not use the devices in "do_not_use" category.
+  3.14 MOS with WPE effect:
+	     1) WPE effect: Netlist generated from PDK contains SCA,SCB,SCC parameters for 
+	        Bsim4.5 simulation. For pre-simulation, users can modify these parameters in 
+	        MOS CDF form if they are available. For post-simulation, LPE tools will extract
+	        SCA,SCB,SCC from layout.
+	        
+	    * Since there is no implant on native devices, there will be no WPE effect on those devices. 
+	      But there are still SCA,SCB,SCC parameters in the netlist of native device. 
+
+  3.15 To use the layout of cross-coupled cfmom(cfmom_mx), please follow the instructions shown below to run the 
+	        MOM register key utility first.
+	   
+	       1> Open any cell in tsmc18 library.
+         2> Click on CIW menu "TSMC PDK Tools"->"tsmcPdkUtilityTool"->"Add MOM license key".
+	       3> Select library "tsmc18" and enter the register key.
+	       4> Press "OK" to start the utility.
+	       
+  3.16 Users who use logic gate devices and run generate from source function to get layout views, it will fail due to no environment setup.
+       Please Add "layoutXL lxEvalCDFCallbacks boolean t" in your own .cdsenv     
+ 
+4. Utilities
+
+       In order to ease the use of this PDK, some utilities are provided below to help users.
+       Please refer to the documents in /PDK_Doc/TSMC_DOC_WM/PDK/TSMC018_Ultilty_Usage_Guide.pdf
+    
+    ***Please remember to backup your designs before running utilities(very important)***
+    
+   4.1 CDF update utility
+
+       When changes are made on a device inside PDK, these changes often affect circuit designs which 
+    have already been created. For example, a sheet resistance value change on a resistor will affect
+    the length of the device passed to the simulator and used to generate the layout.
+    These parameters will not be automatically updated in each of the designer's circuit libraries. A
+    function has been written and included as a part of the PDK to complete the update to an existing
+    library such that all modifications made in a PDK since a previous release are reflected in each 
+    of the circuit designs inside a library. There is a single argument to this fuction which represents
+    the design library which is to be updated with new CDF information. Once this routine has been run
+    , all designs in the designated library will be in sync with the latest release of PDK.
+
+    ***Please note, however, that possible DRC and LVS violations may be arised as a result of running
+    this routine depend on what changes have been made to this PDK***
+
+    For example, value change as specified earlier of sheet resistance could cause shrinkage of length
+    in resistor layout, which resulting an connection open as far as LVS is concerned. Please be sure
+    that designers re-verify each design by simulation, DRC, and LVS to insure that no unintended 
+    modifications have been overlooked.
+    
+    Users may use Update Design (Instance) CDF Utility from TSMC PDK Tools GUI.
+

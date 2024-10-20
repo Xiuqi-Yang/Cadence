@@ -1,0 +1,8 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/spiral_std_mu_x_20k type="cell"
+tsmc18/spiral_sym_mu_x_20k type="cell"
+tsmc18/spiral_sym_ct_mu_x_20k type="cell"
+tsmc18/spiral_std_mu_x_40k type="cell"
+tsmc18/spiral_sym_mu_x_40k type="cell"
+tsmc18/spiral_sym_ct_mu_x_40k type="cell"

@@ -1,0 +1,24 @@
+library rfmos33_cor 
+
+section ff_rfmos33 
+include "cr018gpii_v1d0.scs" section = ff_rfmos33 
+endsection ff_rfmos33 
+
+section fs_rfmos33 
+include "cr018gpii_v1d0.scs" section = fs_rfmos33 
+endsection fs_rfmos33 
+
+section sf_rfmos33 
+include "cr018gpii_v1d0.scs" section = sf_rfmos33 
+endsection sf_rfmos33 
+
+section ss_rfmos33 
+include "cr018gpii_v1d0.scs" section = ss_rfmos33 
+endsection ss_rfmos33 
+
+section tt_rfmos33 
+include "cr018gpii_v1d0.scs" section = tt_rfmos33 
+endsection tt_rfmos33 
+
+
+endlibrary rfmos33_cor 

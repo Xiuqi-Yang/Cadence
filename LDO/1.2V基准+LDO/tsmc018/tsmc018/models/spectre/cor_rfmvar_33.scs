@@ -1,0 +1,16 @@
+library rfmvar_33_cor 
+
+section ff_rfmvar_33 
+include "cr018gpii_v1d0.scs" section = ff_rfmvar_33 
+endsection ff_rfmvar_33 
+
+section ss_rfmvar_33 
+include "cr018gpii_v1d0.scs" section = ss_rfmvar_33 
+endsection ss_rfmvar_33 
+
+section tt_rfmvar_33 
+include "cr018gpii_v1d0.scs" section = tt_rfmvar_33 
+endsection tt_rfmvar_33 
+
+
+endlibrary rfmvar_33_cor 

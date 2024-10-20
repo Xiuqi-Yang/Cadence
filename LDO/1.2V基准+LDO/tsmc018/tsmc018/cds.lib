@@ -1,0 +1,4 @@
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic 
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE tsmc18 ./tsmc18
+DEFINE fdsfd /home/zhang/PDK/tsmc018/fdsfd

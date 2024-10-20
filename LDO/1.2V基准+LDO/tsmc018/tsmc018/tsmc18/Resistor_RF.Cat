@@ -1,0 +1,8 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/rphripoly_rf type="cell"
+tsmc18/rphripoly_rf_mis type="cell"
+tsmc18/rplpoly_rf type="cell"
+tsmc18/rplpoly_rf_mis type="cell"
+tsmc18/rphpoly_rf type="cell"
+tsmc18/rphpoly_rf_mis type="cell"

@@ -1,0 +1,15 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/tri_2v	    type="cell"   
+tsmc18/tri_3v	    type="cell"   
+tsmc18/tri_mvt2v  type="cell"   
+                                  
+tsmc18/tri_2v_mac	   type="cell"
+tsmc18/tri_3v_mac	   type="cell"
+tsmc18/tri_mvt2v_mac type="cell"
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      IC
+HostName                       IC
+ProcessIdentifier              63322
+ProcessCreationTime_UTC        1686815380
+ProcessCreationTime_Readable   Thu Jun 15 15:49:40 2023 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/IC/Project_tsmc180/Ldo_TSMC18/sim_ldo/schematic/sch.oa.cdslck
+TimeEditLocked                 Thu Jun 15 17:30:50 2023 CST

@@ -1,0 +1,4 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/sbd_rf type="cell"
+tsmc18/sbd_rf_nw type="cell"

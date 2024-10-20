@@ -1,0 +1,43 @@
+;
+; sample RSF for running Assura LVS from UNIX
+; Change the parameters for your specific requirement
+
+avParameters(
+; GDS2 Data - use the next line for GDS2 input
+; ?inputLayout ( "GDS2" "<file_name>" )  ; specify full path to gds file
+  ?inputLayout ( "GDS2" "./ts_allcelllvs.gds" )
+
+; DFII Data - use the next line for DFII input .....(DFII not support now)
+;  ?inputLayout ( "df2" "<library>" )
+
+; Top cell name
+; ?cellName  "<cell_name>"
+  ?cellName  "ts_allcelllvs"
+
+; NOTE, viewName needed only for DFII input ....(DFII not support now)
+;  ?viewName  "<view_name>"
+
+  ?rulesFile "./extract.rul"
+  ?runName   "ts_allcelllvs"		;PRINTFILE dev_018s
+  ?workingDirectory "./rundir"
+  ?avrpt t			;run avrpt at end of job
+  ?textPriOnly t	;TEXT-PRI-ONLY YES
+  ?joinPins    top	;nil|top|allLevels :virtual connection is on @top level
+  ?flagNon45   t
+; ?set ("extract_dnwdio") 
+; ?set ("CAP_2P0")
+ ?set ("CDL_input")  
+
+; Point to the Assura RCX technology directory
+;  ?technology "tsmc18lo_rcx_tech"
+;  ?techLib    "./assura_tech.lib"
+) ;end of avParameters
+
+
+; To load ASSURA LVS COMPARE FILE
+load( "./compare.rul" )
+
+
+
+avLVS()
+

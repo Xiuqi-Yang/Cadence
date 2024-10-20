@@ -1,0 +1,8 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/ind_std type="cell"
+tsmc18/ind_sym type="cell"
+tsmc18/ind_sym_ct type="cell"
+tsmc18/ind_std_40k type="cell"
+tsmc18/ind_sym_ct_40k type="cell"
+tsmc18/ind_sym_40k type="cell"

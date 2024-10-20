@@ -1,0 +1,540 @@
+connect ntap_not_var ntap
+connect tndiff ntap
+connect poly gate1_not_IO1
+connect tpdiff ptap
+connect indm6m metal6
+connect indm6p metal6
+connect lcesdp tpdiff
+connect s_tpdiff tpdiff
+connect d_tpdiff tpdiff
+connect tpdiff emit
+connect tpdiff emit_od2
+connect mom3p1 metal3
+connect mom3m1 metal3
+connect mom3m2 metal3
+connect mom3p2 metal3
+connect ydio_hole tndiff
+connect lcesdm tndiff
+connect tpdiff tndiff
+connect d_tndiff tndiff
+connect s_tndiff tndiff
+connect ydio tndiff
+connect poly mim_po
+connect poly poly_rf
+connect mom4p2 metal4
+connect mom4m1 metal4
+connect mom4m2 metal4
+connect mom4p1 metal4
+connect indm4c metal4
+connect poly crt_poly
+connect tpdiff tiod
+connect tndiff tiod
+connect nxwell_npn ncoll
+connect tndiff nemit
+connect mom5p1 metal5
+connect mom5m1 metal5
+connect mim_block metal5
+connect mom5m2 metal5
+connect mom5p2 metal5
+text metal1_text attach metal1
+text metal2_text attach metal2
+text metal3_text attach metal3
+text metal4_text attach metal4
+text metal5_text attach metal5
+text metal6_text attach metal6
+text metal1_ptext attach metal1
+text metal2_ptext attach metal2
+text metal3_ptext attach metal3
+text metal4_ptext attach metal4
+text metal5_ptext attach metal5
+text metal6_ptext attach metal6
+connect metal6 metal5 by VIA5
+connect metal6 ctm by ctm_via
+connect metal7 metal6 by VIA6
+connect UBM metal7 by pm_cbd
+connect metal3 metal2 by VIA2
+connect tndiff nxwell_npn by nplug
+connect tndiff nbase by nplug
+connect tndiff nbase_od2 by nplug
+connect nxwell_npn nbase by nplug
+connect nxwell_npn nbase_od2 by nplug
+connect nbase nbase_od2 by nplug
+connect metal2 metal1 by VIA1
+connect metal1 schottky_n by odCont
+connect metal1 tpdiff by odCont
+connect metal1 schottky_p by odCont
+connect metal1 tndiff by odCont
+connect schottky_n tpdiff by odCont
+connect schottky_n schottky_p by odCont
+connect schottky_n tndiff by odCont
+connect tpdiff schottky_p by odCont
+connect tpdiff tndiff by odCont
+connect schottky_p tndiff by odCont
+connect metal1 poly by polyCont
+connect metal1 ppoly by polyCont
+connect metal1 poly_rf by polyCont
+connect metal1 crt_poly by polyCont
+connect poly ppoly by polyCont
+connect poly poly_rf by polyCont
+connect poly crt_poly by polyCont
+connect ppoly poly_rf by polyCont
+connect ppoly crt_poly by polyCont
+connect poly_rf crt_poly by polyCont
+connect metal4 metal3 by VIA3
+connect pbase tpdiff by pplug
+connect metal5 metal4 by VIA4
+stamp avStamp0004ed by tndiff
+stamp nxwell by avStamp0004ed
+stamp avStamp0004f5 by tpdiff
+stamp RFDUMMY5T by avStamp0004f5
+stamp avStamp0004fd by tpdiff
+stamp n_psub by avStamp0004fd
+stamp avStamp000505 by tpdiff
+stamp psub by avStamp000505
+stamp avStamp00050d by tpdiff
+stamp psub_term by avStamp00050d
+stamp avStamp000515 by tpdiff
+stamp RFDUMMY6T by avStamp000515
+stamp avStamp00051d by tpdiff
+stamp coll_od2 by avStamp00051d
+stamp avStamp000525 by tpdiff
+stamp coll by avStamp000525
+stamp avStamp00052d by tpdiff
+stamp rw by avStamp00052d
+stamp avStamp000535 by nxwell
+stamp avStamp00053d by psub
+stamp poly_term by avStamp000535
+stamp poly_term by avStamp00053d
+stamp avStamp000540 by nxwell
+stamp DNW by avStamp000540
+stamp avStamp000548 by psub
+stamp rfdmy56 by avStamp000548
+model=mos[ND],nch3_mac
+dfiimodel=mos[ND],nmos3vdnw_mac#20ivpcell
+element mos[ND] bngate_mac_MOS_1 poly tndiff psub 
+model=mos[NL],nanch
+dfiimodel=mos[NL],nmosnvt2v#20ivpcell
+element mos[NL] nlgate_MOS_2 poly tndiff psub 
+model=mos[N],nch
+dfiimodel=mos[N],nmos2v#20ivpcell
+element mos[N] ngate_MOS_3 poly tndiff psub 
+model=mos[N_av2],nch_mac
+dfiimodel=mos[N_av2],nmos2v_mac#20ivpcell
+element mos[N_av2] ngate_mac_MOS_4 poly tndiff psub 
+model=mos[N2],nch3
+dfiimodel=mos[N2],nmos3vdnw#20ivpcell
+element mos[N2] bnrgate_MOS_5 poly tndiff psub 
+model=mos[ND_av2],nch3
+dfiimodel=mos[ND_av2],nmos3v#20ivpcell
+element mos[ND_av2] bngate_MOS_6 poly tndiff psub 
+model=mos[NL_av2],nanch_mac
+dfiimodel=mos[NL_av2],nmosnvt2v_mac#20ivpcell
+element mos[NL_av2] nlgate_mac_MOS_7 poly tndiff psub 
+model=mos[N1],nch_mac
+dfiimodel=mos[N1],nmos2v_mac#20ivpcell
+element mos[N1] nrgate_mac_MOS_8 poly tndiff psub 
+model=mos[NB],mench3
+dfiimodel=mos[NB],nmosmvt3v#20ivpcell
+element mos[NB] bmvt_ngate_MOS_9 poly tndiff psub 
+model=mos[NN],nanch3
+dfiimodel=mos[NN],nmosnvt3v#20ivpcell
+element mos[NN] bnlgate_MOS_10 poly tndiff psub 
+model=mos[NA],mench
+dfiimodel=mos[NA],nmosmvt2v#20ivpcell
+element mos[NA] mvt_ngate_MOS_11 poly tndiff psub 
+model=mos[N1_av2],nch
+dfiimodel=mos[N1_av2],nmos2vdnw#20ivpcell
+element mos[N1_av2] nrgate_MOS_12 poly tndiff psub 
+model=mos[NB_av2],mench3_mac
+dfiimodel=mos[NB_av2],nmosmvt3v_mac#20ivpcell
+element mos[NB_av2] bmvt_ngate_mac_MOS_13 poly tndiff psub 
+model=mos[NN_av2],nanch3_mac
+dfiimodel=mos[NN_av2],nmosnvt3v_mac#20ivpcell
+element mos[NN_av2] bnlgate_mac_MOS_14 poly tndiff psub 
+model=mos[NA_av2],mench_mac
+dfiimodel=mos[NA_av2],nmosmvt2v_mac#20ivpcell
+element mos[NA_av2] mvt_ngate_mac_MOS_15 poly tndiff psub 
+model=mos[N2_av2],nch3_mac
+dfiimodel=mos[N2_av2],nmos3vdnw_mac#20ivpcell
+element mos[N2_av2] bnrgate_mac_MOS_16 poly tndiff psub 
+model=mos[PA],mepch_mac
+dfiimodel=mos[PA],pmosmvt2v_mac#20ivpcell
+element mos[PA] mvt_pgate_mac_MOS_17 poly tpdiff nxwell 
+model=mos[PA_av2],mepch
+dfiimodel=mos[PA_av2],pmosmvt2v#20ivpcell
+element mos[PA_av2] mvt_pgate_MOS_18 poly tpdiff nxwell 
+model=mos[P],pch_mac
+dfiimodel=mos[P],pmos2v_mac#20ivpcell
+element mos[P] pgate_mac_MOS_19 poly tpdiff nxwell 
+model=mos[PD],pch3
+dfiimodel=mos[PD],pmos3v#20ivpcell
+element mos[PD] bpgate_MOS_20 poly tpdiff nxwell 
+model=mos[P_av2],pch
+dfiimodel=mos[P_av2],pmos2v#20ivpcell
+element mos[P_av2] pgate_MOS_21 poly tpdiff nxwell 
+model=mos[PD_av2],pch3_mac
+dfiimodel=mos[PD_av2],pmos3v_mac#20ivpcell
+element mos[PD_av2] bpgate_mac_MOS_22 poly tpdiff nxwell 
+model=diode[DB],endio_3
+dfiimodel=diode[DB],diodesd3v#20ivpcell
+element diode[DB] ydio_DIODE_23 psub ydio_hole 
+model=diode[D2],ndio_3
+dfiimodel=diode[D2],dioden3v#20ivpcell
+element diode[D2] ndio_3_DIODE_24 psub tndiff 
+model=diode[D3],nwdio_3
+dfiimodel=diode[D3],diodenw3v#20ivpcell
+element diode[D3] nwdio_3_DIODE_25 psub nxwell 
+model=diode[DP],pdio
+dfiimodel=diode[DP],diodep#20ivpcell
+element diode[DP] pdio_DIODE_26 tpdiff nxwell 
+model=diode[ndio_3m],ndio_3m
+dfiimodel=diode[ndio_3m],ndio_3m#20ivpcell
+element diode[ndio_3m] ndio_3m_DIODE_27 psub tndiff 
+model=diode[D1],pdio_3
+dfiimodel=diode[D1],diodep3v#20ivpcell
+element diode[D1] pdio_3_DIODE_28 tpdiff nxwell 
+model=diode[pdio_m],pdio_m
+dfiimodel=diode[pdio_m],pdio_m#20ivpcell
+element diode[pdio_m] pdio_m_DIODE_29 tpdiff nxwell 
+model=diode[ndio_m],ndio_m
+dfiimodel=diode[ndio_m],ndio_m#20ivpcell
+element diode[ndio_m] ndio_m_DIODE_30 psub tndiff 
+model=diode[DN],ndio
+dfiimodel=diode[DN],dioden#20ivpcell
+element diode[DN] ndio_DIODE_31 psub tndiff 
+model=diode[DW],nwdio
+dfiimodel=diode[DW],diodenw#20ivpcell
+element diode[DW] nwdio_DIODE_32 psub nxwell 
+model=res[LR],rppolyhri
+dfiimodel=res[LR],rphripoly#20ivpcell
+element res[LR] lrpop_RES_33 poly 
+model=res[M5],rm5
+dfiimodel=res[M5],rm5#20ivpcell
+element res[M5] mt5res_RES_34 metal5 
+model=res[NS],rnpo1w
+dfiimodel=res[NS],rnlpoly#20ivpcell
+element res[NS] rnpolys_r_RES_35 poly 
+model=res[PS],rppo1
+dfiimodel=res[PS],rplpoly#20ivpcell
+element res[PS] rppolyl_r_RES_36 poly 
+model=res[M4],rm4
+dfiimodel=res[M4],rm4#20ivpcell
+element res[M4] mt4res_RES_37 metal4 
+model=res[PI],rpod
+dfiimodel=res[PI],rplplus_2t#20ivpcell
+element res[PI] rpodl_r_RES_38 tpdiff 
+model=res[ND_av3],rnodrpo
+dfiimodel=res[ND_av3],rnplus_2t#20ivpcell
+element res[ND_av3] nrdop_RES_39 tndiff 
+model=res[NI],rnodw
+dfiimodel=res[NI],rnlplus_2t#20ivpcell
+element res[NI] rnods_r_RES_40 tndiff 
+model=res[M1],rm1
+dfiimodel=res[M1],rm1#20ivpcell
+element res[M1] mt1res_RES_41 metal1 
+model=res[NR],rnpo1rpo
+dfiimodel=res[NR],rnhpoly#20ivpcell
+element res[NR] nrpop_RES_42 poly 
+model=res[PD_av3],rpodrpo
+dfiimodel=res[PD_av3],rpplus_2t#20ivpcell
+element res[PD_av3] prdop_RES_43 tpdiff 
+model=res[PR],rppo1rpo
+dfiimodel=res[PR],rphpoly#20ivpcell
+element res[PR] prpop_RES_44 poly 
+model=res[M3],rm3
+dfiimodel=res[M3],rm3#20ivpcell
+element res[M3] mt3res_RES_45 metal3 
+model=res[NI_av2],rnod
+dfiimodel=res[NI_av2],rnlplus_2t#20ivpcell
+element res[NI_av2] rnodl_r_RES_46 tndiff 
+model=res[M2],rm2
+dfiimodel=res[M2],rm2#20ivpcell
+element res[M2] mt2res_RES_47 metal2 
+model=res[PS_av2],rppo1w
+dfiimodel=res[PS_av2],rplpoly#20ivpcell
+element res[PS_av2] rppolys_r_RES_48 poly 
+model=res[PI_av2],rpodw
+dfiimodel=res[PI_av2],rplplus_2t#20ivpcell
+element res[PI_av2] rpods_r_RES_49 tpdiff 
+model=res[NS_av2],rnpo1
+dfiimodel=res[NS_av2],rnlpoly#20ivpcell
+element res[NS_av2] rnpolyl_r_RES_50 poly 
+model=generic[rppo1w_dis],rppo1w_dis
+dfiimodel=generic[rppo1w_dis],rplpoly_dis#20ivpcell
+element generic[rppo1w_dis] rppolys_r_3t_Device_51 poly[PLUS] poly[MINUS] poly_term[B] 
+layer capm5_2p0
+layer capm5_2p0_ud
+model=generic[pmos_rf33_nw],pmos_rf33_nw
+dfiimodel=generic[pmos_rf33_nw],rfpmos3v_nw#20ivpcell
+element generic[pmos_rf33_nw] bpgate_4t_pthin_nw_Device_52 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] 
+model=generic[rppolyhri_dis],rppolyhri_dis
+dfiimodel=generic[rppolyhri_dis],rphripoly_dis#20ivpcell
+element generic[rppolyhri_dis] lrpop_3t_Device_53 poly[PLUS] poly[MINUS] poly_term[B] 
+model=generic[rnpo1w_dis],rnpo1w_dis
+dfiimodel=generic[rnpo1w_dis],rnlpoly_dis#20ivpcell
+element generic[rnpo1w_dis] rnpolys_r_3t_Device_54 poly[PLUS] poly[MINUS] poly_term[B] 
+model=bjt[PV_mis],pnp10_mis
+dfiimodel=bjt[PV_mis],vpnp_mis#20ivpcell
+element bjt[PV_mis] emit10_mis_BJT_55 coll nbase emit 
+model=bjt[NV],npn5
+dfiimodel=bjt[NV],npn#20ivpcell
+element bjt[NV] nemit5_BJT_56 ncoll pbase nemit 
+model=generic[nmoscap_33],nmoscap_33
+dfiimodel=generic[nmoscap_33],mos_var_b3#20ivpcell
+element generic[nmoscap_33] nthin_bvar_Device_57 poly[PLUS] tndiff[MINUS] 
+model=bjt[NV_mis],npn5_mis
+dfiimodel=bjt[NV_mis],npn_mis#20ivpcell
+element bjt[NV_mis] nemit5_mis_BJT_58 ncoll pbase nemit 
+model=generic[rnod_m],rnod_m
+dfiimodel=generic[rnod_m],rnlplus#20ivpcell
+element generic[rnod_m] l_rnodl_3t_Device_59 tndiff[PLUS] tndiff[MINUS] psub[B] 
+model=generic[nmos_rf33],nmos_rf33
+dfiimodel=generic[nmos_rf33],rfnmos3v#20ivpcell
+element generic[nmos_rf33] bnrgate_4t_nthin_Device_60 d_tndiff[D] poly_rf[G] s_tndiff[S] psub[B] 
+model=bjt[PV],pnp2
+dfiimodel=bjt[PV],vpnp#20ivpcell
+element bjt[PV] emit2_BJT_61 coll nbase emit 
+model=bjt[NV_av2],npn10
+dfiimodel=bjt[NV_av2],npn#20ivpcell
+element bjt[NV_av2] nemit10_BJT_62 ncoll pbase nemit 
+model=generic[rpodw_m],rpodw_m
+dfiimodel=generic[rpodw_m],rplplus#20ivpcell
+element generic[rpodw_m] s_rpods_3t_Device_63 tpdiff[PLUS] tpdiff[MINUS] nxwell[B] 
+model=generic[rnodrpo_m],rnodrpo_m
+dfiimodel=generic[rnodrpo_m],rnplus#20ivpcell
+element generic[rnodrpo_m] t_nrdop_Device_64 tndiff[PLUS] tndiff[MINUS] psub[B] 
+model=generic[lcesd1_rf],lcesd1_rf
+dfiimodel=generic[lcesd1_rf],lcesd1_rf#20ivpcell
+element generic[lcesd1_rf] lcesd1_rl_Device_65 lcesdp[PLUS] lcesdm[MINUS] 
+model=generic[rppo1_dis],rppo1_dis
+dfiimodel=generic[rppo1_dis],rplpoly_dis#20ivpcell
+element generic[rppo1_dis] rppolyl_r_3t_Device_66 poly[PLUS] poly[MINUS] poly_term[B] 
+model=generic[crtmom],crtmom
+dfiimodel=generic[crtmom],crtmom#20ivpcell
+element generic[crtmom] mom13_reg_Device_67 metal3[PLUS] metal3[MINUS] crt_poly[BULK] 
+model=generic[cfmom],cfmom
+dfiimodel=generic[cfmom],cfmom#20ivpcell
+element generic[cfmom] fmom13_reg_Device_68 metal3[PLUS] metal3[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf],cfmom_rf
+dfiimodel=generic[cfmom_rf],cfmom_rf#20ivpcell
+element generic[cfmom_rf] fmom13_rf_reg_Device_69 metal3[PLUS] metal3[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx],cfmom_mx
+dfiimodel=generic[cfmom_mx],cfmom_mx#20ivpcell
+element generic[cfmom_mx] fmom13_mx_reg_Device_70 mom3p1[PLUS1] mom3m1[MINUS1] mom3p2[PLUS2] mom3m2[MINUS2] crt_poly[BULK] 
+model=generic[crtmom_av2],crtmom
+dfiimodel=generic[crtmom_av2],crtmom#20ivpcell
+element generic[crtmom_av2] mom14_reg_Device_71 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_av2],cfmom
+dfiimodel=generic[cfmom_av2],cfmom#20ivpcell
+element generic[cfmom_av2] fmom14_reg_Device_72 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf_av2],cfmom_rf
+dfiimodel=generic[cfmom_rf_av2],cfmom_rf#20ivpcell
+element generic[cfmom_rf_av2] fmom14_rf_reg_Device_73 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx_av2],cfmom_mx
+dfiimodel=generic[cfmom_mx_av2],cfmom_mx#20ivpcell
+element generic[cfmom_mx_av2] fmom14_mx_reg_Device_74 mom4p1[PLUS1] mom4m1[MINUS1] mom4p2[PLUS2] mom4m2[MINUS2] crt_poly[BULK] 
+model=generic[crtmom_av3],crtmom
+dfiimodel=generic[crtmom_av3],crtmom#20ivpcell
+element generic[crtmom_av3] mom15_reg_Device_75 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_av3],cfmom
+dfiimodel=generic[cfmom_av3],cfmom#20ivpcell
+element generic[cfmom_av3] fmom15_reg_Device_76 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf_av3],cfmom_rf
+dfiimodel=generic[cfmom_rf_av3],cfmom_rf#20ivpcell
+element generic[cfmom_rf_av3] fmom15_rf_reg_Device_77 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx_av3],cfmom_mx
+dfiimodel=generic[cfmom_mx_av3],cfmom_mx#20ivpcell
+element generic[cfmom_mx_av3] fmom15_mx_reg_Device_78 mom5p1[PLUS1] mom5m1[MINUS1] mom5p2[PLUS2] mom5m2[MINUS2] crt_poly[BULK] 
+model=generic[crtmom_av4],crtmom
+dfiimodel=generic[crtmom_av4],crtmom#20ivpcell
+element generic[crtmom_av4] mom24_reg_Device_79 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_av4],cfmom
+dfiimodel=generic[cfmom_av4],cfmom#20ivpcell
+element generic[cfmom_av4] fmom24_reg_Device_80 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf_av4],cfmom_rf
+dfiimodel=generic[cfmom_rf_av4],cfmom_rf#20ivpcell
+element generic[cfmom_rf_av4] fmom24_rf_reg_Device_81 metal4[PLUS] metal4[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx_av4],cfmom_mx
+dfiimodel=generic[cfmom_mx_av4],cfmom_mx#20ivpcell
+element generic[cfmom_mx_av4] fmom24_mx_reg_Device_82 mom4p1[PLUS1] mom4m1[MINUS1] mom4p2[PLUS2] mom4m2[MINUS2] crt_poly[BULK] 
+model=generic[crtmom_av5],crtmom
+dfiimodel=generic[crtmom_av5],crtmom#20ivpcell
+element generic[crtmom_av5] mom25_reg_Device_83 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_av5],cfmom
+dfiimodel=generic[cfmom_av5],cfmom#20ivpcell
+element generic[cfmom_av5] fmom25_reg_Device_84 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf_av5],cfmom_rf
+dfiimodel=generic[cfmom_rf_av5],cfmom_rf#20ivpcell
+element generic[cfmom_rf_av5] fmom25_rf_reg_Device_85 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx_av5],cfmom_mx
+dfiimodel=generic[cfmom_mx_av5],cfmom_mx#20ivpcell
+element generic[cfmom_mx_av5] fmom25_mx_reg_Device_86 mom5p1[PLUS1] mom5m1[MINUS1] mom5p2[PLUS2] mom5m2[MINUS2] crt_poly[BULK] 
+model=generic[crtmom_av6],crtmom
+dfiimodel=generic[crtmom_av6],crtmom#20ivpcell
+element generic[crtmom_av6] mom35_reg_Device_87 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_av6],cfmom
+dfiimodel=generic[cfmom_av6],cfmom#20ivpcell
+element generic[cfmom_av6] fmom35_reg_Device_88 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_rf_av6],cfmom_rf
+dfiimodel=generic[cfmom_rf_av6],cfmom_rf#20ivpcell
+element generic[cfmom_rf_av6] fmom35_rf_reg_Device_89 metal5[PLUS] metal5[MINUS] crt_poly[BULK] 
+model=generic[cfmom_mx_av6],cfmom_mx
+dfiimodel=generic[cfmom_mx_av6],cfmom_mx#20ivpcell
+element generic[cfmom_mx_av6] fmom35_mx_reg_Device_90 mom5p1[PLUS1] mom5m1[MINUS1] mom5p2[PLUS2] mom5m2[MINUS2] crt_poly[BULK] 
+model=generic[rnpo1_dis],rnpo1_dis
+dfiimodel=generic[rnpo1_dis],rnlpoly_dis#20ivpcell
+element generic[rnpo1_dis] rnpolyl_r_3t_Device_91 poly[PLUS] poly[MINUS] poly_term[B] 
+model=generic[spiral_sym_mu_x_20k],spiral_sym_mu_x_20k
+dfiimodel=generic[spiral_sym_mu_x_20k],spiral_sym_mu_x_20k#20ivpcell
+element generic[spiral_sym_mu_x_20k] sym_mu_x_20k_ind_Device_92 indm6p[PLUS] indm6m[MINUS] psub[BULK] 
+model=generic[rppolyhri_rf],rppolyhri_rf
+dfiimodel=generic[rppolyhri_rf],rphripoly_rf#20ivpcell
+element generic[rppolyhri_rf] lrpop_rf_Device_93 ppoly[PLUS] ppoly[MINUS] DNW[BULK] 
+model=generic[xjvar_w40],xjvar_w40
+dfiimodel=generic[xjvar_w40],jvar#20ivpcell
+element generic[xjvar_w40] jvar_ws_Device_94 tpdiff[PLUS] tndiff[MINUS] psub[BULK] 
+model=bjt[P1],pnp5_3
+dfiimodel=bjt[P1],vpnp3#20ivpcell
+element bjt[P1] iemit5_BJT_95 coll_od2 nbase_od2 emit_od2 
+model=generic[moscap_rf_nw],moscap_rf_nw
+dfiimodel=generic[moscap_rf_nw],moscap_rf_nw#20ivpcell
+element generic[moscap_rf_nw] varnwmc_rf_nw_Device_96 poly[PLUS] tndiff[MINUS] psub[BULK] 
+model=generic[rnodw_m],rnodw_m
+dfiimodel=generic[rnodw_m],rnlplus#20ivpcell
+element generic[rnodw_m] s_rnods_3t_Device_97 tndiff[PLUS] tndiff[MINUS] psub[B] 
+model=generic[mimcap_1p0_sin_3t],mimcap_1p0_sin_3t
+dfiimodel=generic[mimcap_1p0_sin_3t],mimcap_1p0_sin_3t#20ivpcell
+element generic[mimcap_1p0_sin_3t] capm5_1p0_3t_Device_98 ctm[PLUS] metal5[MINUS] psub[BULK] 
+layer capm5_1p0_3t
+model=bjt[PV_av2],pnp5
+dfiimodel=bjt[PV_av2],vpnp#20ivpcell
+element bjt[PV_av2] emit5_BJT_99 coll nbase emit 
+model=bjt[P1_av2],pnp10_3
+dfiimodel=bjt[P1_av2],vpnp3#20ivpcell
+element bjt[P1_av2] iemit10_BJT_100 coll_od2 nbase_od2 emit_od2 
+model=generic[sbd_rf],sbd_rf
+dfiimodel=generic[sbd_rf],sbd_rf#20ivpcell
+element generic[sbd_rf] sbd_rf_Device_101 schottky_p[PLUS] schottky_n[MINUS] psub[BULK] 
+model=generic[rnwsti_m],rnwsti_m
+dfiimodel=generic[rnwsti_m],rnwsti_m#20ivpcell
+element generic[rnwsti_m] nwstia_Device_102 nxwell[PLUS] nxwell[MINUS] psub[B] 
+model=generic[pmos_rf],pmos_rf
+dfiimodel=generic[pmos_rf],rfpmos2v#20ivpcell
+element generic[pmos_rf] pgate_4t_pthin_Device_103 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] 
+model=bjt[PV_av3],pnp10
+dfiimodel=bjt[PV_av3],vpnp#20ivpcell
+element bjt[PV_av3] emit10_BJT_104 coll nbase emit 
+model=generic[rppolywo_rf],rppolywo_rf
+dfiimodel=generic[rppolywo_rf],rphpoly_rf#20ivpcell
+element generic[rppolywo_rf] prpop_rf3t_Device_105 poly[PLUS] poly[MINUS] DNW[BULK] 
+model=generic[spiral_sym_ct_mu_x_20k],spiral_sym_ct_mu_x_20k
+dfiimodel=generic[spiral_sym_ct_mu_x_20k],spiral_sym_ct_mu_x_20k#20ivpcell
+element generic[spiral_sym_ct_mu_x_20k] sym_ct_mu_x_20k_ind_Device_106 indm6p[PLUS] indm6m[MINUS] psub[BULK] indm4c[CTAP] 
+model=bjt[P1_av3],pnp2_3
+dfiimodel=bjt[P1_av3],vpnp3#20ivpcell
+element bjt[P1_av3] iemit2_BJT_107 coll_od2 nbase_od2 emit_od2 
+model=res[WO],rnwod
+dfiimodel=res[WO],rnwod_2t#20ivpcell
+element res[WO] nwod_RES_108 nxwell 
+model=generic[rpod_m],rpod_m
+dfiimodel=generic[rpod_m],rplplus#20ivpcell
+element generic[rpod_m] l_rpodl_3t_Device_109 tpdiff[PLUS] tpdiff[MINUS] nxwell[B] 
+model=generic[nmos_rf33_6t],nmos_rf33_6t
+dfiimodel=generic[nmos_rf33_6t],rfnmos3v_6t#20ivpcell
+element generic[nmos_rf33_6t] bnrgate_6t_nthin_Device_110 d_tndiff[D] poly_rf[G] s_tndiff[S] rw[B] DNW[NG] RFDUMMY6T[PG] 
+layer capm5_2p0_3t
+model=generic[pmos_rf_5t],pmos_rf_5t
+dfiimodel=generic[pmos_rf_5t],rfpmos2v_5t#20ivpcell
+element generic[pmos_rf_5t] pgate_5t_pthin_Device_111 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] RFDUMMY5T[PG] 
+model=generic[rnpo1rpo_dis],rnpo1rpo_dis
+dfiimodel=generic[rnpo1rpo_dis],rnhpoly_dis#20ivpcell
+element generic[rnpo1rpo_dis] nrpop_3t_Device_112 poly[PLUS] poly[MINUS] poly_term[B] 
+model=generic[mimcap_1p0_sin],mimcap_1p0_sin
+dfiimodel=generic[mimcap_1p0_sin],mimcap_1p0_sin#20ivpcell
+element generic[mimcap_1p0_sin] capm5_1p0_Device_113 ctm[TOP] metal5[BOT] 
+model=generic[mimcap_1p0_sin_av2],mimcap_1p0_sin
+dfiimodel=generic[mimcap_1p0_sin_av2],mimcap_1p0_sin#20ivpcell
+element generic[mimcap_1p0_sin_av2] capm5_1p0_ud_Device_114 ctm[TOP] metal5[BOT] 
+layer capm5_1p0
+layer capm5_1p0_ud
+model=bjt[NV_mis_av2],npn10_mis
+dfiimodel=bjt[NV_mis_av2],npn_mis#20ivpcell
+element bjt[NV_mis_av2] nemit10_mis_BJT_115 ncoll pbase nemit 
+model=generic[moscap_rf33],moscap_rf33
+dfiimodel=generic[moscap_rf33],moscap_rf33#20ivpcell
+element generic[moscap_rf33] varnwmi_rf_dnw_Device_116 poly[PLUS] tndiff[MINUS] psub[BULK] 
+model=generic[rnwod_m],rnwod_m
+dfiimodel=generic[rnwod_m],rnwod#20ivpcell
+element generic[rnwod_m] nwoda_Device_117 nxwell[PLUS] nxwell[MINUS] psub[B] 
+model=bjt[PV_mis_av2],pnp5_mis
+dfiimodel=bjt[PV_mis_av2],vpnp_mis#20ivpcell
+element bjt[PV_mis_av2] emit5_mis_BJT_118 coll nbase emit 
+model=generic[nmos_rf_6t],nmos_rf_6t
+dfiimodel=generic[nmos_rf_6t],rfnmos2v_6t#20ivpcell
+element generic[nmos_rf_6t] nrgate_6t_nthin_Device_119 d_tndiff[D] poly_rf[G] s_tndiff[S] rw[B] DNW[NG] RFDUMMY6T[PG] 
+model=generic[spiral_std_mu_x_20k],spiral_std_mu_x_20k
+dfiimodel=generic[spiral_std_mu_x_20k],spiral_std_mu_x_20k#20ivpcell
+element generic[spiral_std_mu_x_20k] std_mu_x_20k_ind_Device_120 indm6p[PLUS] indm6m[MINUS] psub[BULK] 
+model=bjt[PV_mis_av3],pnp2_mis
+dfiimodel=bjt[PV_mis_av3],vpnp_mis#20ivpcell
+element bjt[PV_mis_av3] emit2_mis_BJT_121 coll nbase emit 
+model=generic[rppo1rpo_dis],rppo1rpo_dis
+dfiimodel=generic[rppo1rpo_dis],rphpoly_dis#20ivpcell
+element generic[rppo1rpo_dis] prpop_3t_Device_122 poly[PLUS] poly[MINUS] poly_term[B] 
+model=generic[rppolys_rf],rppolys_rf
+dfiimodel=generic[rppolys_rf],rplpoly_rf#20ivpcell
+element generic[rppolys_rf] rppolys_rf_3t_Device_123 poly[PLUS] poly[MINUS] DNW[BULK] 
+model=generic[lcesd2_rf],lcesd2_rf
+dfiimodel=generic[lcesd2_rf],lcesd2_rf#20ivpcell
+element generic[lcesd2_rf] lcesd2_rl_Device_124 lcesdp[PLUS] lcesdm[MINUS] 
+model=generic[pmos_rf_nw],pmos_rf_nw
+dfiimodel=generic[pmos_rf_nw],rfpmos2v_nw#20ivpcell
+element generic[pmos_rf_nw] pgate_4t_pthin_nw_Device_125 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] 
+model=generic[pmos_rf_nw_5t],pmos_rf_nw_5t
+dfiimodel=generic[pmos_rf_nw_5t],rfpmos2v_nw_5t#20ivpcell
+element generic[pmos_rf_nw_5t] pgate_5t_pthin_nw_Device_126 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] RFDUMMY5T[PG] 
+model=generic[nmos_rf],nmos_rf
+dfiimodel=generic[nmos_rf],rfnmos2v#20ivpcell
+element generic[nmos_rf] nrgate_4t_nthin_Device_127 d_tndiff[D] poly_rf[G] s_tndiff[S] psub[B] 
+model=generic[pmos_rf33],pmos_rf33
+dfiimodel=generic[pmos_rf33],rfpmos3v#20ivpcell
+element generic[pmos_rf33] bpgate_4t_pthin_Device_128 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] 
+model=bjt[NV_av3],npn2
+dfiimodel=bjt[NV_av3],npn#20ivpcell
+element bjt[NV_av3] nemit2_BJT_129 ncoll pbase nemit 
+model=bjt[NV_mis_av3],npn2_mis
+dfiimodel=bjt[NV_mis_av3],npn_mis#20ivpcell
+element bjt[NV_mis_av3] nemit2_mis_BJT_130 ncoll pbase nemit 
+model=generic[rpodrpo_m],rpodrpo_m
+dfiimodel=generic[rpodrpo_m],rpplus#20ivpcell
+element generic[rpodrpo_m] t_prdop_Device_131 tpdiff[PLUS] tpdiff[MINUS] nxwell[B] 
+model=generic[moscap_rf],moscap_rf
+dfiimodel=generic[moscap_rf],moscap_rf#20ivpcell
+element generic[moscap_rf] varnwmc_rf_dnw_Device_132 poly[PLUS] tndiff[MINUS] psub[BULK] 
+model=generic[pmos_rf33_5t],pmos_rf33_5t
+dfiimodel=generic[pmos_rf33_5t],rfpmos3v_5t#20ivpcell
+element generic[pmos_rf33_5t] bpgate_5t_pthin_Device_133 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] RFDUMMY5T[PG] 
+model=generic[pmos_rf33_nw_5t],pmos_rf33_nw_5t
+dfiimodel=generic[pmos_rf33_nw_5t],rfpmos3v_nw_5t#20ivpcell
+element generic[pmos_rf33_nw_5t] bpgate_5t_pthin_nw_Device_134 d_tpdiff[D] poly_rf[G] s_tpdiff[S] nxwell[B] RFDUMMY5T[PG] 
+model=res[MT],rmt
+dfiimodel=res[MT],rmt#20ivpcell
+element res[MT] mt6res_RES_135 metal6 
+model=generic[rppolyl_rf],rppolyl_rf
+dfiimodel=generic[rppolyl_rf],rplpoly_rf#20ivpcell
+element generic[rppolyl_rf] rppolyl_rf_3t_Device_136 poly[PLUS] poly[MINUS] DNW[BULK] 
+model=generic[sbd_rf_nw],sbd_rf_nw
+dfiimodel=generic[sbd_rf_nw],sbd_rf_nw#20ivpcell
+element generic[sbd_rf_nw] sbd_rf_nw_Device_137 schottky_p[PLUS] schottky_n[MINUS] psub[BULK] 
+model=generic[xjvar_nr36],xjvar_nr36
+dfiimodel=generic[xjvar_nr36],jvar#20ivpcell
+element generic[xjvar_nr36] jvar_nr_Device_138 tpdiff[PLUS] tndiff[MINUS] psub[BULK] 
+model=generic[nmoscap],nmoscap
+dfiimodel=generic[nmoscap],mos_var_b#20ivpcell
+element generic[nmoscap] nthin_var_Device_139 poly[PLUS] tndiff[MINUS] 
+model=generic[moscap_rf33_nw],moscap_rf33_nw
+dfiimodel=generic[moscap_rf33_nw],moscap_rf33_nw#20ivpcell
+element generic[moscap_rf33_nw] varnwmi_rf_nw_Device_140 poly[PLUS] tndiff[MINUS] psub[BULK] 
+model=res[WR],rnwsti
+dfiimodel=res[WR],rnwell#20ivpcell
+element res[WR] nwsti_RES_141 nxwell 

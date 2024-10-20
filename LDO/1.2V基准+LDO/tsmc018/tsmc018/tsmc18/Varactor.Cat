@@ -1,0 +1,5 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/Varactor_BB.Cat type="category"
+tsmc18/Varactor_RF.Cat type="category"
+

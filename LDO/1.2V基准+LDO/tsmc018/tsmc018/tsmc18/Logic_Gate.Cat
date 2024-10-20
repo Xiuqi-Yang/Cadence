@@ -1,0 +1,9 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/INV.Cat type="category"
+tsmc18/NAND.Cat type="category"
+tsmc18/NOR.Cat type="category"
+tsmc18/TRI.Cat type="category"
+tsmc18/PASS.Cat type="category"
+
+

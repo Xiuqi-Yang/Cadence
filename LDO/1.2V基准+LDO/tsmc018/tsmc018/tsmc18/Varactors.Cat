@@ -1,0 +1,10 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/mos_var_b type="cell"
+tsmc18/mos_var_b3 type="cell"
+tsmc18/nmoscap type="cell"
+tsmc18/pmoscap type="cell"
+tsmc18/jvar type="cell"
+tsmc18/mos_var type="cell"
+tsmc18/mos_var33 type="cell"
+

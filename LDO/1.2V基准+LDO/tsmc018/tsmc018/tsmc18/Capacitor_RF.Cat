@@ -1,0 +1,8 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/mimcap_rf type="cell"
+tsmc18/mimcap_rf_2p0 type="cell"
+tsmc18/mimcap_rf_40k type="cell"
+tsmc18/mimcap_rf_40k_2p0 type="cell"
+tsmc18/crtmom_rf type="cell"
+tsmc18/cfmom_rf type="cell"

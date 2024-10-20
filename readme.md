@@ -57,6 +57,8 @@ https://bbs.eetop.cn/thread-411105-1-1.html
 ### 测量增益带宽积(GB)
 然后利用AC扫描频率，利用计算器功能可以测出增益带宽积GB
 或者还有一种方法如下，选择Results->Direct Plot->db20
+也可以在main form里面选
+
 ![3](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/3.png?raw=true)
 
 ### 测量相位裕度
@@ -87,3 +89,22 @@ https://www.bilibili.com/video/BV14K41157gD/?vd_source=1665cada9c9517dbf4ed9e94d
 
 ![SR_U](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/SR%20U.png?raw=true)
 ![SR_F](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/SR%20D.png?raw=true)
+
+### PSRR
+AC扫频分析
+![PRSS](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/PSRR.png?raw=true)
+![PRSS1](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/PSRR1.png?raw=true)
+
+徐子然的是
+AV=4200
+20lgAv0 = 72.46dB
+
+增益带宽积即为 0dB 处的频率值。 133.9mdB 时候，频率为 3.368MHz>3MHz
+在图片上方可以看到 133.86mdB 时，相位为-90.83deg，所以相位裕量为 180deg-90.83deg=89.17deg>60deg,满足设计要求
+
+在低频时，抑制比在-46.7dB。
+CMRR = ADM/ADM−CM= 72.7 + 46.7 = 119.4dB在低频的时候，共模抑制比为 119.4dB。
+
+绿色为输出电压曲线，红色为输入电压曲线。可以是谁得到输入输出电压曲线在
+773.7mV-2.592V 之间基本保持重合，所以满足设计指标共模输入范围在 1.1V-2.5V 之间。
+Vout range 在 0.59-2.7V 之间基本符合设计要求

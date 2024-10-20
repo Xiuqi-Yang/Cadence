@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/rfpmos2v_5t type="cell"
+tsmc18/rfpmos2v_nw_5t type="cell"
+tsmc18/rfpmos3v_5t type="cell"
+tsmc18/rfpmos3v_nw_5t type="cell"

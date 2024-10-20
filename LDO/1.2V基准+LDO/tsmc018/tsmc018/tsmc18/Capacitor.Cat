@@ -1,0 +1,5 @@
+TDMCHECKPOINT="1.0"
+keepEmptyCategory type="unknown"
+tsmc18/Capacitor_BB.Cat type="category"
+tsmc18/Capacitor_RF.Cat type="category"
+

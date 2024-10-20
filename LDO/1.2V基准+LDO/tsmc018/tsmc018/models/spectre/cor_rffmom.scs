@@ -1,0 +1,16 @@
+library rffmom_cor 
+
+section ff_rffmom 
+include "cr018gpii_v1d0.scs" section = ff_rffmom 
+endsection ff_rffmom 
+
+section ss_rffmom 
+include "cr018gpii_v1d0.scs" section = ss_rffmom 
+endsection ss_rffmom 
+
+section tt_rffmom 
+include "cr018gpii_v1d0.scs" section = tt_rffmom 
+endsection tt_rffmom 
+
+
+endlibrary rffmom_cor 
