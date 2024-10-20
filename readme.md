@@ -51,6 +51,11 @@ AC Amplitude，指的是信号的幅度，这个可以看瞬态看出，值太�
 ```
 https://bbs.eetop.cn/thread-411105-1-1.html
 
+### 测量增益带宽积(GB)
 然后利用AC扫描频率，利用计算器功能可以测出增益带宽积GB
 或者还有一种方法如下，选择Results->Direct Plot->db20
 ![3](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/3.png?raw=true)
+
+### 测量相位裕度
+同样也是利用Results->Direct Plot->AC GAIN&PHASE
+跳出的窗口要点两下，第一下点输出，第二下点正输入（有交流分量那个）
