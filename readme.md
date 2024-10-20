@@ -59,3 +59,6 @@ https://bbs.eetop.cn/thread-411105-1-1.html
 ### 测量相位裕度
 同样也是利用Results->Direct Plot->AC GAIN&PHASE
 跳出的窗口要点两下，第一下点输出，第二下点正输入（有交流分量那个）
+![4](https://github.com/Xiuqi-Yang/Cadence/blob/main/picture/4.png?raw=true)
+
+### 测量CMRR共模抑制比
